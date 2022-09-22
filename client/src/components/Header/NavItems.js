@@ -1,6 +1,6 @@
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import AccountBalanceWallet from '@mui/icons-material/AccountBalanceWallet';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const NavItems = () => {
     return ( 
@@ -41,7 +41,19 @@ const NavItems = () => {
                     </div>
                 </div>
             </div>
-
+            <div className="nav-items-container-xl-lg">
+                <ul className="nav-items-xl-lg">
+                    <div className="nav-items-humberger-lg-xl">
+                        <li className="nav-items-humberger-lg-xl-item">
+                            <div className="humberger-lg-xl-button-container">
+                                <button className="humberger-lg-xl-button">
+                                    <MenuIcon fontSize='large'/>
+                                </button>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
         </ul>
      );
 }
