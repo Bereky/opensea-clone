@@ -54,6 +54,19 @@ const NavItems = () => {
                     </div>
                 </ul>
             </div>
+            <div className="nav-items-container-sm-lg">
+                <ul className="nav-items-sm-lg">
+                    <div className="nav-items-humberger-sm-lg">
+                        <li className="nav-items-humberger-sm-lg-item">
+                            <div className="humberger-sm-lg-button-container">
+                                <button className="humberger-sm-lg-button">
+                                    <MenuIcon fontSize='large'/>
+                                </button>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
         </ul>
      );
 }

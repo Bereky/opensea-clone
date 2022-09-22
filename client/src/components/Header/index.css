@@ -160,9 +160,9 @@
     .search-bar-inner-child {
         height: 45px;
     }
-    .search-bar-container {
+    /* .search-bar-container {
         display: none;
-    }
+    } */
 }
 
 .search-bar-form {
@@ -314,8 +314,10 @@ ul {
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    padding-inline-start: 40px;
+    padding-inline-start: 10px;
 }
+
+/* Extra large screen */
 
 .nav-items-container-xl {
     display: flex;
@@ -323,7 +325,7 @@ ul {
     padding: 0%;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1000px) {
     .nav-items-container-xl {
         display: none;
     }
@@ -354,10 +356,11 @@ ul {
     width: 100%;
     text-decoration: none;
     font-weight: 600;
+    transition: .4s;
 }
 
-.nav-item-xl-link :hover {
-    color: rgba(4, 17, 29, 0.1);
+.nav-item-xl-link:hover {
+    color: rgba(4, 17, 29, 0.7);
 }
 
 @media (min-width: 600px){
@@ -365,6 +368,9 @@ ul {
         padding: 0px 16px;
     }
 }
+
+
+/* Large screen  */
 
 
 .nav-actions-container-lg {
@@ -375,6 +381,10 @@ ul {
 .nav-actions-container-lg-child {
     display: flex;
 }
+
+/* .nav-actions-container-lg-child:hover {
+    color: rgba(4, 17, 29, 0.7);
+} */
 
 .nav-actions-account-item {
     align-items: center;
@@ -437,12 +447,21 @@ ul {
     writing-mode: horizontal-tb
 }
 
+
 /* Humbergur menu */
 
-@media (max-width: 1200px){
+/* @media (min-width: 1000px){
     .nav-items-container-xl-lg {
+        display: none;
+    }
+} */
+
+@media (max-width: 800px){
+    .nav-actions-container-lg, .nav-items-container-xl-lg {
+        display: none;
     }
 }
+
 
 .nav-items-container-xl-lg {
     margin: 0px;
@@ -458,7 +477,7 @@ ul {
 }
 
 .nav-items-humberger-lg-xl {
-
+    display: block;
 }
 
 .nav-items-humberger-lg-xl-item {
@@ -482,6 +501,67 @@ ul {
 }
 
 .humberger-lg-xl-button {
+    align-items: center;
+    color: rgb(4, 17, 29);
+    display: flex;
+    height: 100%;
+    padding: 0px 10px;
+    position: relative;
+    width: 100%;
+    font-size: 100%;
+    font-family: inherit;
+    border: 0px;
+    background: inherit;
+    appearance: button;
+    cursor: pointer;
+}
+
+/* Hamberger menu small to wide screen */
+
+@media (min-width: 800px){
+    .nav-items-container-sm-lg {
+        display: none;
+    }
+}
+
+.nav-items-container-sm-lg {
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav-items-sm-lg {
+    display: flex;
+    padding-left: 0px;
+    list-style-type: none;
+    justify-content: center;
+    margin: 0%;
+}
+
+.nav-items-humberger-sm-lg {
+    display: block;
+}
+
+.nav-items-humberger-sm-lg-item {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 72px;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 16px;
+    flex-shrink: 0;
+    list-style-type: none;
+}
+
+.humberger-sm-lg-button-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.humberger-sm-lg-button {
     align-items: center;
     color: rgb(4, 17, 29);
     display: flex;
