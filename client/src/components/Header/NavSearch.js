@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext, Fragment } from 'react';
+import {useContext, Fragment } from 'react';
 import { SearchContext } from '../../Context/SearchContext';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import './index.css'
@@ -14,7 +14,6 @@ const NavSearch = () => {
 
     return (
         <Fragment>
-
         <div className="navbar-search">
             <div className="search-bar-container">
                 <div className="search-bar">
