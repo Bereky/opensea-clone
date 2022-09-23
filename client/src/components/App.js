@@ -1,11 +1,12 @@
 import { Fragment } from 'react'
+import { SearchProvider } from '../Context/SearchProvider';
 import Header from './Header';
 
 const App = () => {
     return ( 
-        <Fragment>
+        <SearchProvider>
             <Header />
-        </Fragment>
+        </SearchProvider>
      );
 }
  
