@@ -160,9 +160,9 @@
     .search-bar-inner-child {
         height: 45px;
     }
-    /* .search-bar-container {
+    .search-bar-container {
         display: none;
-    } */
+    }
 }
 
 .search-bar-form {
@@ -233,6 +233,9 @@
     padding: 0;
     height: 100%;
     width: 100%;
+    position: absolute;
+    z-index: 1000;
+    background-color: #ffffff;
 }
 
 .search-bar-inner-sm {
@@ -386,6 +389,21 @@ ul {
     color: rgba(4, 17, 29, 0.7);
 } */
 
+.cancel-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 72px;
+    width: 50px;
+}
+
+.cancel-search-icon {
+    height: 50%;
+    width: 100%;
+    margin: auto;
+}
+
 .nav-actions-account-item {
     align-items: center;
     cursor: pointer;
@@ -457,9 +475,10 @@ ul {
 } */
 
 @media (max-width: 800px){
-    .nav-actions-container-lg, .nav-items-container-xl-lg {
+    .nav-actions-container-lg {
         display: none;
     }
+   
 }
 
 
@@ -518,8 +537,11 @@ ul {
 
 /* Hamberger menu small to wide screen */
 
-@media (min-width: 800px){
+@media (min-width: 600px){
     .nav-items-container-sm-lg {
+        display: none;
+    }
+    .search-small-screen {
         display: none;
     }
 }

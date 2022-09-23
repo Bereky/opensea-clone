@@ -1,8 +1,19 @@
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import AccountBalanceWallet from '@mui/icons-material/AccountBalanceWallet';
 import MenuIcon from '@mui/icons-material/Menu';
+import SearchIcon from '@mui/icons-material/Search';
+import { useState, useContext } from 'react';
+import { SearchContext } from '../../Context/SearchContext';
 
 const NavItems = () => {
+    /* Small screen search toggle */
+    const [ isOpen, setIsOpen ] = useState(false)
+    const searchContext = useContext(SearchContext)
+    
+    const handelOpen = () => {
+        searchContext.setSearchBarIsOpen(true)
+    }
+
     return ( 
         <ul className="navbar-items">
             <div className="nav-items-container-xl">
@@ -41,6 +52,26 @@ const NavItems = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Small screen search bar */}
+
+            
+            <div className="nav-items-container-sm-lg">
+                <ul className="nav-items-sm-lg">
+                    <div className="nav-items-humberger-sm-lg">
+                        <li className="nav-items-humberger-sm-lg-item">
+                            <div className="humberger-sm-lg-button-container">
+                                <button className="humberger-sm-lg-button">
+                                    <SearchIcon fontSize='large' onClick={handelOpen}/>
+                                </button>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
+            
+
             <div className="nav-items-container-xl-lg">
                 <ul className="nav-items-xl-lg">
                     <div className="nav-items-humberger-lg-xl">
@@ -54,19 +85,7 @@ const NavItems = () => {
                     </div>
                 </ul>
             </div>
-            <div className="nav-items-container-sm-lg">
-                <ul className="nav-items-sm-lg">
-                    <div className="nav-items-humberger-sm-lg">
-                        <li className="nav-items-humberger-sm-lg-item">
-                            <div className="humberger-sm-lg-button-container">
-                                <button className="humberger-sm-lg-button">
-                                    <MenuIcon fontSize='large'/>
-                                </button>
-                            </div>
-                        </li>
-                    </div>
-                </ul>
-            </div>
+           
         </ul>
      );
 }

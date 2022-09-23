@@ -1,45 +1,24 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext, Fragment } from 'react';
+import { SearchContext } from '../../Context/SearchContext';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import './index.css'
 
 const NavSearch = () => {
-    const [ isOpen, setIsOpen ] = useState(false)
-    const [ width, setWidth ] = useState()
 
+    /* Search functionSmaller screen */
+    const searchContext = useContext(SearchContext)
+    
+    const handelClick = () => {
+        searchContext.setSearchBarIsOpen(false)
+    }
 
-    useEffect(() => {
-        const updateWidth = () => {
-            const newWidth = window.innerWidth
-            setWidth(newWidth)
-            if(newWidth <= 600 ){
-                console.log("inner width", newWidth)
-                /* setIsOpen(true) */
-            }
-            else {
-                setIsOpen(false)
-            }
-        }
-        window.addEventListener("resize", updateWidth)
-        return () => window.removeEventListener("resize", updateWidth)
-    }, [])
+    return (
+        <Fragment>
 
-    return ( 
         <div className="navbar-search">
-            {isOpen && 
-                <div className="search-small-screen">
-                    <div className="search-bar-inner-sm">
-                        <div className="search-bar-inner-child-sm">
-                            <div className="search-bar-form-sm">
-                                <div className="search-bar-back-icon">
-                                </div>
-                                <input type='search' placeholder='Search items, collections, and accounts' role='searchbox' />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            }
             <div className="search-bar-container">
                 <div className="search-bar">
-                    <div className="search-bar-equal-sm">
+                    <div className="search-bar-equal">
                         <div className="search-bar-inner">
                             <div className="search-bar-inner-child">
                                 <div className="search-bar-form">
@@ -53,6 +32,25 @@ const NavSearch = () => {
                 </div>
             </div>
         </div>
+        {searchContext.searchBarIsOpen && 
+            <div className="search-small-screen">
+                <div className="cancel-search">
+                    <div className="cancel-search-icon">
+                        <ArrowBackIosNewIcon fontSize='large' onClick={handelClick}/>
+                    </div>
+                </div>
+                <div className="search-bar-inner-sm">
+                    <div className="search-bar-inner-child-sm">
+                        <div className="search-bar-form-sm">
+                            <div className="search-bar-back-icon">
+                            </div>
+                            <input type='search' placeholder='Search items, collections, and accounts' role='searchbox' />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+        </Fragment> 
      );
 }
  
