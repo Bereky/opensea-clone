@@ -54,21 +54,14 @@ const NavItems = () => {
         }
     }
 
+
+
     const [ itemState, dispatchHover ] = useReducer(hoverReducer, itemStates)
 
     const handelOpen = () => {
         searchContext.setSearchBarIsOpen(true)
     }
 
-    const handleHover = (item) => {
-        /* setIsHovered(true) */
-        
-    }
-
-    const handleCancelHover = () => {
-        /* setIsHovered(false) */
-        
-    }
 
     return ( 
         <ul className="navbar-items">
@@ -251,11 +244,6 @@ const NavItems = () => {
                                     <ul className="dropdown-list">
                                         <li className="dropdown-list-item">
                                             <a href="#" className="dropdown-list-item-link">
-                                                {/* <div className="list-item-icon">
-                                                    <div className="icon-con">
-                                                        <img src="https://opensea.io/static/images/icons/allnfts-light.svg" alt="all-nft" className="icon-image" />
-                                                    </div>
-                                                </div> */}
                                                 <div className="list-item-name">
                                                     <span className="item-name">Rankings</span>
                                                 </div>
@@ -264,11 +252,7 @@ const NavItems = () => {
 
                                         <li className="dropdown-list-item">
                                             <a href="#" className="dropdown-list-item-link">
-                                                {/* <div className="list-item-icon">
-                                                    <div className="icon-con">
-                                                        <img src="https://opensea.io/static/images/icons/allnfts-light.svg" alt="all-nft" className="icon-image" />
-                                                    </div>
-                                                </div> */}
+                                                
                                                 <div className="list-item-name">
                                                     <span className="item-name">Activity</span>
                                                 </div>
@@ -289,11 +273,7 @@ const NavItems = () => {
                                     <ul className="dropdown-list">
                                         <li className="dropdown-list-item">
                                             <a href="#" className="dropdown-list-item-link">
-                                                {/* <div className="list-item-icon">
-                                                    <div className="icon-con">
-                                                        <img src="https://opensea.io/static/images/icons/allnfts-light.svg" alt="all-nft" className="icon-image" />
-                                                    </div>
-                                                </div> */}
+                                                
                                                 <div className="list-item-name">
                                                     <span className="item-name">Learn</span>
                                                 </div>
@@ -302,11 +282,7 @@ const NavItems = () => {
 
                                         <li className="dropdown-list-item">
                                             <a href="#" className="dropdown-list-item-link">
-                                                {/* <div className="list-item-icon">
-                                                    <div className="icon-con">
-                                                        <img src="https://opensea.io/static/images/icons/allnfts-light.svg" alt="all-nft" className="icon-image" />
-                                                    </div>
-                                                </div> */}
+                                                
                                                 <div className="list-item-name">
                                                     <span className="item-name">Help Center</span>
                                                 </div>
@@ -315,11 +291,7 @@ const NavItems = () => {
 
                                         <li className="dropdown-list-item">
                                             <a href="#" className="dropdown-list-item-link">
-                                                {/* <div className="list-item-icon">
-                                                    <div className="icon-con">
-                                                        <img src="https://opensea.io/static/images/icons/allnfts-light.svg" alt="all-nft" className="icon-image" />
-                                                    </div>
-                                                </div> */}
+                                                
                                                 <div className="list-item-name">
                                                     <span className="item-name">Platform Status</span>
                                                 </div>
@@ -328,11 +300,7 @@ const NavItems = () => {
 
                                         <li className="dropdown-list-item">
                                             <a href="#" className="dropdown-list-item-link">
-                                                {/* <div className="list-item-icon">
-                                                    <div className="icon-con">
-                                                        <img src="https://opensea.io/static/images/icons/allnfts-light.svg" alt="all-nft" className="icon-image" />
-                                                    </div>
-                                                </div> */}
+                                               
                                                 <div className="list-item-name">
                                                     <span className="item-name">Partner</span>
                                                 </div>
@@ -341,11 +309,7 @@ const NavItems = () => {
 
                                         <li className="dropdown-list-item">
                                             <a href="#" className="dropdown-list-item-link">
-                                                {/* <div className="list-item-icon">
-                                                    <div className="icon-con">
-                                                        <img src="https://opensea.io/static/images/icons/allnfts-light.svg" alt="all-nft" className="icon-image" />
-                                                    </div>
-                                                </div> */}
+                                                
                                                 <div className="list-item-name">
                                                     <span className="item-name">Taxes</span>
                                                 </div>
@@ -354,11 +318,7 @@ const NavItems = () => {
 
                                         <li className="dropdown-list-item">
                                             <a href="#" className="dropdown-list-item-link">
-                                                {/* <div className="list-item-icon">
-                                                    <div className="icon-con">
-                                                        <img src="https://opensea.io/static/images/icons/allnfts-light.svg" alt="all-nft" className="icon-image" />
-                                                    </div>
-                                                </div> */}
+                                                
                                                 <div className="list-item-name">
                                                     <span className="item-name">Blog</span>
                                                 </div>
@@ -367,11 +327,7 @@ const NavItems = () => {
 
                                         <li className="dropdown-list-item">
                                             <a href="#" className="dropdown-list-item-link">
-                                                {/* <div className="list-item-icon">
-                                                    <div className="icon-con">
-                                                        <img src="https://opensea.io/static/images/icons/allnfts-light.svg" alt="all-nft" className="icon-image" />
-                                                    </div>
-                                                </div> */}
+                                                
                                                 <div className="list-item-name">
                                                     <span className="item-name">Docs</span>
                                                 </div>
@@ -380,11 +336,7 @@ const NavItems = () => {
 
                                         <li className="dropdown-list-item">
                                             <a href="#" className="dropdown-list-item-link">
-                                                {/* <div className="list-item-icon">
-                                                    <div className="icon-con">
-                                                        <img src="https://opensea.io/static/images/icons/allnfts-light.svg" alt="all-nft" className="icon-image" />
-                                                    </div>
-                                                </div> */}
+                                                
                                                 <div className="list-item-name">
                                                     <span className="item-name">Newsletter</span>
                                                 </div>
