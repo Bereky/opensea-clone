@@ -308,6 +308,7 @@
     display: flex;
     flex-shrink: 0;
     margin: 0px;
+    position: relative;
 }
 
 ul {
@@ -740,6 +741,16 @@ ul {
     left: 170px;
 }
 
+.account-drop-down-root {
+    position: absolute;
+    visibility: visible;
+    margin: 0px;
+   /*  transform: translate3D(750.5px, 70px, 0px); */
+    inset: 0px auto auto 0px;
+    /* max-width: calc(100vw - 10px); */
+    top: 72px;
+    left: 230px;
+}
 
 .dropdown-list-item-socials {
     width: 100%;

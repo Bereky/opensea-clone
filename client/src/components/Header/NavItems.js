@@ -10,6 +10,14 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import RedditIcon from '@mui/icons-material/Reddit';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
+import PersonIcon from '@mui/icons-material/Person';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import GridOnIcon from '@mui/icons-material/GridOn';
+import SettingsIcon from '@mui/icons-material/Settings';
+import LanguageIcon from '@mui/icons-material/Language';
+import Brightness2Icon from '@mui/icons-material/Brightness2';
+
 const itemStates = [
     {
         name: "explore",
@@ -21,6 +29,10 @@ const itemStates = [
     },
     {
         name: "resources",
+        hovered: false
+    },
+    {
+        name: "account",
         hovered: false
     }
 ]
@@ -384,12 +396,116 @@ const NavItems = () => {
                         </div>
                     }
 
+                    {/* Profile dropdown */}
+
+                    
+
                 </div>
             </div>
-
+            { itemState[3].hovered &&
+                        
+                        <div className="account-drop-down-root" onMouseLeave={ () => dispatchHover({ itemState: "MOUSE_LEAVE", name: "account" })} onMouseEnter={ () => dispatchHover({ itemState: "MOUSE_ENTER", name: "account" }) }>
+                           <div className="explore-dropdown">
+                               <div className="explore-dropdown-content">
+                                   <ul className="dropdown-list">
+                                       <li className="dropdown-list-item">
+                                           <a href="#" className="dropdown-list-item-link">
+                                               <div className="list-item-icon">
+                                                   <div className="icon-con">
+                                                       <PersonIcon />
+                                                   </div>
+                                               </div>
+                                               <div className="list-item-name">
+                                                   <span className="item-name">Profile</span>
+                                               </div>
+                                           </a>
+                                       </li>
+   
+                                       <li className="dropdown-list-item">
+                                           <a href="#" className="dropdown-list-item-link">
+                                               <div className="list-item-icon">
+                                                   <div className="icon-con">
+                                                        <FavoriteBorderIcon />
+                                                   </div>
+                                               </div>
+                                               <div className="list-item-name">
+                                                   <span className="item-name">Favorites</span>
+                                               </div>
+                                           </a>
+                                       </li>
+   
+                                       <li className="dropdown-list-item">
+                                           <a href="#" className="dropdown-list-item-link">
+                                               <div className="list-item-icon">
+                                                   <div className="icon-con">
+                                                       <VisibilityIcon />
+                                                   </div>
+                                               </div>
+                                               <div className="list-item-name">
+                                                   <span className="item-name">Watchlist</span>
+                                               </div>
+                                           </a>
+                                       </li>
+   
+                                       <li className="dropdown-list-item">
+                                           <a href="#" className="dropdown-list-item-link">
+                                               <div className="list-item-icon">
+                                                   <div className="icon-con">
+                                                    <GridOnIcon />
+                                                   </div>
+                                               </div>
+                                               <div className="list-item-name">
+                                                   <span className="item-name">My Collections</span>
+                                               </div>
+                                           </a>
+                                       </li>
+   
+                                       <li className="dropdown-list-item">
+                                           <a href="#" className="dropdown-list-item-link">
+                                               <div className="list-item-icon">
+                                                   <div className="icon-con">
+                                                        <SettingsIcon />
+                                                   </div>
+                                               </div>
+                                               <div className="list-item-name">
+                                                   <span className="item-name">Setting</span>
+                                               </div>
+                                           </a>
+                                       </li>
+   
+                                       <li className="dropdown-list-item">
+                                           <a href="#" className="dropdown-list-item-link">
+                                               <div className="list-item-icon">
+                                                   <div className="icon-con">
+                                                        <LanguageIcon />
+                                                   </div>
+                                               </div>
+                                               <div className="list-item-name">
+                                                   <span className="item-name">Language</span>
+                                               </div>
+                                           </a>
+                                       </li>
+   
+                                       <li className="dropdown-list-item">
+                                           <a href="#" className="dropdown-list-item-link">
+                                               <div className="list-item-icon">
+                                                   <div className="icon-con">
+                                                        <Brightness2Icon />
+                                                   </div>
+                                               </div>
+                                               <div className="list-item-name">
+                                                   <span className="item-name">Night Mode</span>
+                                               </div>
+                                           </a>
+                                       </li>
+                                   </ul>
+                               </div>
+                           </div>
+                       </div>
+                       }
             <div className="nav-actions-container-lg">
                 <div className="nav-actions-container-lg-child">
-                    <div className="nav-actions-account">
+                    <div className="nav-actions-account" onMouseEnter={ () => dispatchHover({ itemState: "MOUSE_ENTER", name: "account" }) } onMouseLeave={ () => dispatchHover({ itemState: "MOUSE_LEAVE", name: "account" })}>
                         <li className="nav-actions-account-item">
                             <a href="#" className="nav-actions-account-link">
                                 <AccountCircleIcon fontSize='large'/>
