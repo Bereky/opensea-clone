@@ -503,7 +503,7 @@ const NavItems = () => {
                            </div>
                        </div>
                        }
-                       
+
             <div className="nav-actions-container-lg">
                 <div className="nav-actions-container-lg-child">
                     <div className="nav-actions-account" onMouseEnter={ () => dispatchHover({ itemState: "MOUSE_ENTER", name: "account" }) } onMouseLeave={ () => dispatchHover({ itemState: "MOUSE_LEAVE", name: "account" })}>
@@ -556,7 +556,7 @@ const NavItems = () => {
                 </ul>
             </div>
            
-           {/* Hover menu elements */}
+           
 
            
         </ul>
