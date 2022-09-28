@@ -7,6 +7,11 @@ import LanguageIcon from '@mui/icons-material/Language';
 import Brightness2Icon from '@mui/icons-material/Brightness2';
 import ToggleOffIcon from '@mui/icons-material/ToggleOff';
 
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import RedditIcon from '@mui/icons-material/Reddit';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+
 const NavSide = () => {
     return (
         <aside className="nav-mobile-container">
@@ -83,8 +88,50 @@ const NavSide = () => {
                             </div>
                         </li>
 
+                        <li className="nav-mobile-menu-item-button">
+                            <div className="menu-item-container">
+                                <button className="menu-item-button-connect-wallet">
+                                    Connect Wallet
+                                </button>
+                            </div>
+                        </li>
+
                         
                     </ul>
+                    <div className="nav-item-socials">
+                        <div href="#" className="item-socials-container">
+                            <a href="#" className="list-item-social-icon">
+                                <div className="icon-con">
+                                    <TwitterIcon />
+                                </div>
+                            </a>
+                            <a href="#" className="list-item-social-icon">
+                                <div className="icon-con">
+                                    <InstagramIcon />
+                                </div>
+                            </a>
+                            <a href="#" className="list-item-social-icon">
+                                <div className="icon-con">
+                                    <TwitterIcon />
+                                </div>
+                            </a>
+                            <a href="#" className="list-item-social-icon">
+                                <div className="icon-con">
+                                    <RedditIcon />
+                                </div>
+                            </a>
+                            <a href="#" className="list-item-social-icon">
+                                <div className="icon-con">
+                                    <YouTubeIcon />
+                                </div>
+                            </a>
+                            <a href="#" className="list-item-social-icon">
+                                <div className="icon-con">
+                                    <TwitterIcon />
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </aside>
