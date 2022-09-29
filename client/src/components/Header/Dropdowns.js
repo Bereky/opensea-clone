@@ -51,5 +51,16 @@ export const Dropdowns = {
             iconsrc: "https://opensea.io/static/images/icons/virtual-worlds-light.svg",
             altText: "virtual world"
         }
+    ],
+
+    stats: [
+        {
+            name: "Rankings",
+            link: ""
+        },
+        {
+            name: "Activity",
+            link: ""
+        }
     ]
 }
