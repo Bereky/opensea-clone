@@ -19,7 +19,7 @@ import LanguageIcon from '@mui/icons-material/Language';
 import Brightness2Icon from '@mui/icons-material/Brightness2';
 
 import { Dropdowns } from './Dropdowns';
-import NavDropdownItem from './NavDropdownItem';
+import { NavDropdownStats, NavDropdownExplore }  from './NavDropdownItem';
 
 const itemStates = [
     {
@@ -102,7 +102,7 @@ const NavItems = () => {
                         <div className="explore-dropdown">
                             <div className="explore-dropdown-content">
                                 <ul className="dropdown-list">
-                                    {Dropdowns.explore.map((item) => <NavDropdownItem listName={item.name} imageSource={item.iconsrc} altText={item.altText} />)}
+                                    {Dropdowns.explore.map((item) => <NavDropdownExplore listName={item.name} imageSource={item.iconsrc} altText={item.altText} />)}
                                 </ul>
                             </div>
                         </div>
@@ -116,23 +116,7 @@ const NavItems = () => {
                             <div className="explore-dropdown">
                                 <div className="explore-dropdown-content">
                                     <ul className="dropdown-list">
-                                        <li className="dropdown-list-item">
-                                            <a href="#" className="dropdown-list-item-link">
-                                                <div className="list-item-name">
-                                                    <span className="item-name">Rankings</span>
-                                                </div>
-                                            </a>
-                                        </li>
-
-                                        <li className="dropdown-list-item">
-                                            <a href="#" className="dropdown-list-item-link">
-                                                
-                                                <div className="list-item-name">
-                                                    <span className="item-name">Activity</span>
-                                                </div>
-                                            </a>
-                                        </li>
-
+                                        {Dropdowns.explore.map((item) => <NavDropdownStats name={item.name} />)}
                                     </ul>
                                 </div>
                             </div>
