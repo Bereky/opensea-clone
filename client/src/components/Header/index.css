@@ -890,6 +890,11 @@ ul {
     border-radius: 12px;
 }
 
+.menu-item-button-connect-wallet:hover {
+    background-color: rgba(32, 129, 226, 0.9);
+
+}
+
 .nav-item-socials {
     display: flex;
     width: 100%;

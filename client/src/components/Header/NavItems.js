@@ -555,10 +555,6 @@ const NavItems = () => {
                     </div>
                 </ul>
             </div>
-           
-           
-
-           
         </ul>
      );
 }
