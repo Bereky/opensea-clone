@@ -1,6 +1,6 @@
 
 
-const NavDropdownItem = (props) => {
+const NavDropdownExplore = (props) => {
     return ( 
         <li className="dropdown-list-item">
             <a href="#" className="dropdown-list-item-link">
@@ -16,5 +16,20 @@ const NavDropdownItem = (props) => {
         </li>
      );
 }
+
+const NavDropdownStats = (props) => {
+    return (
+        <li className="dropdown-list-item">
+            <a href="#" className="dropdown-list-item-link">
+                <div className="list-item-name">
+                    <span className="item-name">{props.name}</span>
+                </div>
+            </a>
+        </li>
+    )
+}
  
-export default NavDropdownItem;
+export {
+    NavDropdownStats,
+    NavDropdownExplore
+};
