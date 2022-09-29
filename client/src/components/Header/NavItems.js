@@ -18,6 +18,9 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import LanguageIcon from '@mui/icons-material/Language';
 import Brightness2Icon from '@mui/icons-material/Brightness2';
 
+import { Dropdowns } from './Dropdowns';
+import NavDropdownItem from './NavDropdownItem';
+
 const itemStates = [
     {
         name: "explore",
@@ -99,148 +102,7 @@ const NavItems = () => {
                         <div className="explore-dropdown">
                             <div className="explore-dropdown-content">
                                 <ul className="dropdown-list">
-                                    <li className="dropdown-list-item">
-                                        <a href="#" className="dropdown-list-item-link">
-                                            <div className="list-item-icon">
-                                                <div className="icon-con">
-                                                    <img src="https://opensea.io/static/images/icons/allnfts-light.svg" alt="all-nft" className="icon-image" />
-                                                </div>
-                                            </div>
-                                            <div className="list-item-name">
-                                                <span className="item-name">All NFTs</span>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li className="dropdown-list-item">
-                                        <a href="#" className="dropdown-list-item-link">
-                                            <div className="list-item-icon">
-                                                <div className="icon-con">
-                                                    <img src="https://opensea.io/static/images/icons/solana-light.svg" alt="all-nft" className="icon-image" />
-                                                </div>
-                                            </div>
-                                            <div className="list-item-name">
-                                                <span className="item-name">Solana NFTs</span>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li className="dropdown-list-item">
-                                        <a href="#" className="dropdown-list-item-link">
-                                            <div className="list-item-icon">
-                                                <div className="icon-con">
-                                                    <img src="https://opensea.io/static/images/icons/art-light.svg" alt="all-nft" className="icon-image" />
-                                                </div>
-                                            </div>
-                                            <div className="list-item-name">
-                                                <span className="item-name">Art</span>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li className="dropdown-list-item">
-                                        <a href="#" className="dropdown-list-item-link">
-                                            <div className="list-item-icon">
-                                                <div className="icon-con">
-                                                    <img src="https://opensea.io/static/images/icons/collectibles-light.svg" alt="all-nft" className="icon-image" />
-                                                </div>
-                                            </div>
-                                            <div className="list-item-name">
-                                                <span className="item-name">Collectibles</span>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li className="dropdown-list-item">
-                                        <a href="#" className="dropdown-list-item-link">
-                                            <div className="list-item-icon">
-                                                <div className="icon-con">
-                                                    <img src="https://opensea.io/static/images/icons/domain-names-light.svg" alt="all-nft" className="icon-image" />
-                                                </div>
-                                            </div>
-                                            <div className="list-item-name">
-                                                <span className="item-name">Domain Names</span>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li className="dropdown-list-item">
-                                        <a href="#" className="dropdown-list-item-link">
-                                            <div className="list-item-icon">
-                                                <div className="icon-con">
-                                                    <img src="https://opensea.io/static/images/icons/music-light.svg" alt="all-nft" className="icon-image" />
-                                                </div>
-                                            </div>
-                                            <div className="list-item-name">
-                                                <span className="item-name">Music</span>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li className="dropdown-list-item">
-                                        <a href="#" className="dropdown-list-item-link">
-                                            <div className="list-item-icon">
-                                                <div className="icon-con">
-                                                    <img src="https://opensea.io/static/images/icons/photography-category-light.svg" alt="all-nft" className="icon-image" />
-                                                </div>
-                                            </div>
-                                            <div className="list-item-name">
-                                                <span className="item-name">Photography</span>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li className="dropdown-list-item">
-                                        <a href="#" className="dropdown-list-item-link">
-                                            <div className="list-item-icon">
-                                                <div className="icon-con">
-                                                    <img src="https://opensea.io/static/images/icons/sports-light.svg" alt="all-nft" className="icon-image" />
-                                                </div>
-                                            </div>
-                                            <div className="list-item-name">
-                                                <span className="item-name">Sports</span>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li className="dropdown-list-item">
-                                        <a href="#" className="dropdown-list-item-link">
-                                            <div className="list-item-icon">
-                                                <div className="icon-con">
-                                                    <img src="https://opensea.io/static/images/icons/trading-cards-light.svg" alt="all-nft" className="icon-image" />
-                                                </div>
-                                            </div>
-                                            <div className="list-item-name">
-                                                <span className="item-name">Trading Cards</span>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li className="dropdown-list-item">
-                                        <a href="#" className="dropdown-list-item-link">
-                                            <div className="list-item-icon">
-                                                <div className="icon-con">
-                                                    <img src="https://opensea.io/static/images/icons/utility-light.svg" alt="all-nft" className="icon-image" />
-                                                </div>
-                                            </div>
-                                            <div className="list-item-name">
-                                                <span className="item-name">Utility</span>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li className="dropdown-list-item">
-                                        <a href="#" className="dropdown-list-item-link">
-                                            <div className="list-item-icon">
-                                                <div className="icon-con">
-                                                    <img src="https://opensea.io/static/images/icons/virtual-worlds-light.svg" alt="all-nft" className="icon-image" />
-                                                </div>
-                                            </div>
-                                            <div className="list-item-name">
-                                                <span className="item-name">Virtual Worlds</span>
-                                            </div>
-                                        </a>
-                                    </li>
+                                    {Dropdowns.explore.map((item) => <NavDropdownItem listName={item.name} imageSource={item.iconsrc} altText={item.altText} />)}
                                 </ul>
                             </div>
                         </div>
