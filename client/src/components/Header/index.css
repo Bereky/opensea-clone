@@ -793,7 +793,7 @@ ul {
 }
 
 .nav-mobile {
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: rgb(251,  253, 255);
     flex: 1 0 0%;
