@@ -61,6 +61,41 @@ export const Dropdowns = {
         {
             name: "Activity",
             link: ""
+        },
+    ],
+
+    resources: [
+        {
+            name: "Learn",
+            link: ""
+        },
+        {
+            name: "Help Center",
+            link: ""
+        },
+        {
+            name: "Platform Status",
+            link: ""
+        },
+        {
+            name: "Partner",
+            link: ""
+        },
+        {
+            name: "Taxes",
+            link: ""
+        },
+        {
+            name: "Blog",
+            link: ""
+        },
+        {
+            name: "Docs",
+            link: ""
+        },
+        {
+            name: "Newsletter",
+            link: ""
         }
     ]
 }
