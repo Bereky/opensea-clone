@@ -19,7 +19,7 @@ import LanguageIcon from '@mui/icons-material/Language';
 import Brightness2Icon from '@mui/icons-material/Brightness2';
 
 import { Dropdowns } from './Dropdowns';
-import { NavDropdownStats, NavDropdownExplore }  from './NavDropdownItem';
+import { NavDropdownStats, NavDropdownExplore, NavDropDownResources }  from './NavDropdownItem';
 
 const itemStates = [
     {
@@ -116,7 +116,7 @@ const NavItems = () => {
                             <div className="explore-dropdown">
                                 <div className="explore-dropdown-content">
                                     <ul className="dropdown-list">
-                                        {Dropdowns.explore.map((item) => <NavDropdownStats name={item.name} />)}
+                                        {Dropdowns.stats.map((item) => <NavDropdownStats name={item.name} />)}
                                     </ul>
                                 </div>
                             </div>
@@ -129,77 +129,9 @@ const NavItems = () => {
                             <div className="explore-dropdown">
                                 <div className="explore-dropdown-content">
                                     <ul className="dropdown-list">
-                                        <li className="dropdown-list-item">
-                                            <a href="#" className="dropdown-list-item-link">
-                                                
-                                                <div className="list-item-name">
-                                                    <span className="item-name">Learn</span>
-                                                </div>
-                                            </a>
-                                        </li>
+                                        
+                                    {Dropdowns.resources.map((item) => <NavDropDownResources name={item.name} />)}
 
-                                        <li className="dropdown-list-item">
-                                            <a href="#" className="dropdown-list-item-link">
-                                                
-                                                <div className="list-item-name">
-                                                    <span className="item-name">Help Center</span>
-                                                </div>
-                                            </a>
-                                        </li>
-
-                                        <li className="dropdown-list-item">
-                                            <a href="#" className="dropdown-list-item-link">
-                                                
-                                                <div className="list-item-name">
-                                                    <span className="item-name">Platform Status</span>
-                                                </div>
-                                            </a>
-                                        </li>
-
-                                        <li className="dropdown-list-item">
-                                            <a href="#" className="dropdown-list-item-link">
-                                               
-                                                <div className="list-item-name">
-                                                    <span className="item-name">Partner</span>
-                                                </div>
-                                            </a>
-                                        </li>
-
-                                        <li className="dropdown-list-item">
-                                            <a href="#" className="dropdown-list-item-link">
-                                                
-                                                <div className="list-item-name">
-                                                    <span className="item-name">Taxes</span>
-                                                </div>
-                                            </a>
-                                        </li>
-
-                                        <li className="dropdown-list-item">
-                                            <a href="#" className="dropdown-list-item-link">
-                                                
-                                                <div className="list-item-name">
-                                                    <span className="item-name">Blog</span>
-                                                </div>
-                                            </a>
-                                        </li>
-
-                                        <li className="dropdown-list-item">
-                                            <a href="#" className="dropdown-list-item-link">
-                                                
-                                                <div className="list-item-name">
-                                                    <span className="item-name">Docs</span>
-                                                </div>
-                                            </a>
-                                        </li>
-
-                                        <li className="dropdown-list-item">
-                                            <a href="#" className="dropdown-list-item-link">
-                                                
-                                                <div className="list-item-name">
-                                                    <span className="item-name">Newsletter</span>
-                                                </div>
-                                            </a>
-                                        </li>
 
                                         <li className="dropdown-list-item">
                                             <div href="#" className="dropdown-list-item-socials">
