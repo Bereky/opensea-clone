@@ -5,7 +5,6 @@ export const SearchProvider = ({ children }) => {
     const [ open, setOpen] = useState()
 
     const setIsOpen = () => {
-        console.log("update")
         if(open){
             setOpen(false)
         }

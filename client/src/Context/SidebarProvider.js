@@ -5,7 +5,6 @@ export const SidebarProvider = ({ children }) => {
     const [ open, setOpen] = useState()
 
     const setIsOpen = () => {
-        console.log("update")
         if(open){
             setOpen(false)
         }
@@ -15,7 +14,7 @@ export const SidebarProvider = ({ children }) => {
     }
 
     const sidebarCxt = {
-        siderBarIsOpen: open,
+        sideBarIsOpen: open,
         setSideBarIsOpen: setIsOpen
     }
 
