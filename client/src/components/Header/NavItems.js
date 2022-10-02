@@ -19,7 +19,7 @@ import LanguageIcon from '@mui/icons-material/Language';
 import Brightness2Icon from '@mui/icons-material/Brightness2';
 
 import { Dropdowns } from './Dropdowns';
-import { NavDropdownStats, NavDropdownExplore, NavDropDownResources }  from './NavDropdownItem';
+import { NavDropdownStats, NavDropdownExplore, NavDropDownResources, NavDropdownAccount }  from './NavDropdownItem';
 
 const itemStates = [
     {
@@ -186,96 +186,9 @@ const NavItems = () => {
                            <div className="explore-dropdown">
                                <div className="explore-dropdown-content">
                                    <ul className="dropdown-list">
-                                       <li className="dropdown-list-item">
-                                           <a href="#" className="dropdown-list-item-link">
-                                               <div className="list-item-icon">
-                                                   <div className="icon-con">
-                                                       <PersonIcon />
-                                                   </div>
-                                               </div>
-                                               <div className="list-item-name">
-                                                   <span className="item-name">Profile</span>
-                                               </div>
-                                           </a>
-                                       </li>
-   
-                                       <li className="dropdown-list-item">
-                                           <a href="#" className="dropdown-list-item-link">
-                                               <div className="list-item-icon">
-                                                   <div className="icon-con">
-                                                        <FavoriteBorderIcon />
-                                                   </div>
-                                               </div>
-                                               <div className="list-item-name">
-                                                   <span className="item-name">Favorites</span>
-                                               </div>
-                                           </a>
-                                       </li>
-   
-                                       <li className="dropdown-list-item">
-                                           <a href="#" className="dropdown-list-item-link">
-                                               <div className="list-item-icon">
-                                                   <div className="icon-con">
-                                                       <VisibilityIcon />
-                                                   </div>
-                                               </div>
-                                               <div className="list-item-name">
-                                                   <span className="item-name">Watchlist</span>
-                                               </div>
-                                           </a>
-                                       </li>
-   
-                                       <li className="dropdown-list-item">
-                                           <a href="#" className="dropdown-list-item-link">
-                                               <div className="list-item-icon">
-                                                   <div className="icon-con">
-                                                    <GridOnIcon />
-                                                   </div>
-                                               </div>
-                                               <div className="list-item-name">
-                                                   <span className="item-name">My Collections</span>
-                                               </div>
-                                           </a>
-                                       </li>
-   
-                                       <li className="dropdown-list-item">
-                                           <a href="#" className="dropdown-list-item-link">
-                                               <div className="list-item-icon">
-                                                   <div className="icon-con">
-                                                        <SettingsIcon />
-                                                   </div>
-                                               </div>
-                                               <div className="list-item-name">
-                                                   <span className="item-name">Setting</span>
-                                               </div>
-                                           </a>
-                                       </li>
-   
-                                       <li className="dropdown-list-item">
-                                           <a href="#" className="dropdown-list-item-link">
-                                               <div className="list-item-icon">
-                                                   <div className="icon-con">
-                                                        <LanguageIcon />
-                                                   </div>
-                                               </div>
-                                               <div className="list-item-name">
-                                                   <span className="item-name">Language</span>
-                                               </div>
-                                           </a>
-                                       </li>
-   
-                                       <li className="dropdown-list-item">
-                                           <a href="#" className="dropdown-list-item-link">
-                                               <div className="list-item-icon">
-                                                   <div className="icon-con">
-                                                        <Brightness2Icon />
-                                                   </div>
-                                               </div>
-                                               <div className="list-item-name">
-                                                   <span className="item-name">Night Mode</span>
-                                               </div>
-                                           </a>
-                                       </li>
+
+                                    {Dropdowns.account.map((item) => <NavDropdownAccount name={item.name} icon={item.icon} />)}
+                                      
                                    </ul>
                                </div>
                            </div>
