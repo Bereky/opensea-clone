@@ -1,6 +1,7 @@
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import AccountBalanceWallet from '@mui/icons-material/AccountBalanceWallet';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import SearchIcon from '@mui/icons-material/Search';
 import { useState, useContext, useReducer } from 'react';
 import { SearchContext } from '../../Context/SearchContext';
@@ -10,16 +11,9 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import RedditIcon from '@mui/icons-material/Reddit';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
-import PersonIcon from '@mui/icons-material/Person';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import GridOnIcon from '@mui/icons-material/GridOn';
-import SettingsIcon from '@mui/icons-material/Settings';
-import LanguageIcon from '@mui/icons-material/Language';
-import Brightness2Icon from '@mui/icons-material/Brightness2';
-
 import { Dropdowns } from './Dropdowns';
 import { NavDropdownStats, NavDropdownExplore, NavDropDownResources, NavDropdownAccount }  from './NavDropdownItem';
+import { SidebarContext } from '../../Context/SidebarContext';
 
 const itemStates = [
     {
@@ -43,6 +37,7 @@ const itemStates = [
 const NavItems = () => {
     /* Small screen search toggle */
     const searchContext = useContext(SearchContext)
+    const sidebarContext = useContext(SidebarContext)
 
     const hoverReducer = (state, action) => {
         switch (action.itemState) {
@@ -73,8 +68,12 @@ const NavItems = () => {
 
     const [ itemState, dispatchHover ] = useReducer(hoverReducer, itemStates)
 
-    const handelOpen = () => {
+    const handleOpen = () => {
         searchContext.setSearchBarIsOpen(true)
+    }
+
+    const handleSideBar = () => {
+        sidebarContext.setSideBarIsOpen(true)
     }
 
 
@@ -182,18 +181,18 @@ const NavItems = () => {
             </div>
             { itemState[3].hovered &&
                         
-                        <div className="account-drop-down-root" onMouseLeave={ () => dispatchHover({ itemState: "MOUSE_LEAVE", name: "account" })} onMouseEnter={ () => dispatchHover({ itemState: "MOUSE_ENTER", name: "account" }) }>
-                           <div className="explore-dropdown">
-                               <div className="explore-dropdown-content">
-                                   <ul className="dropdown-list">
+            <div className="account-drop-down-root" onMouseLeave={ () => dispatchHover({ itemState: "MOUSE_LEAVE", name: "account" })} onMouseEnter={ () => dispatchHover({ itemState: "MOUSE_ENTER", name: "account" }) }>
+                <div className="explore-dropdown">
+                    <div className="explore-dropdown-content">
+                        <ul className="dropdown-list">
 
-                                    {Dropdowns.account.map((item) => <NavDropdownAccount name={item.name} icon={item.icon} />)}
-                                      
-                                   </ul>
-                               </div>
-                           </div>
-                       </div>
-                       }
+                        {Dropdowns.account.map((item) => <NavDropdownAccount name={item.name} icon={item.icon} />)}
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            }
 
             <div className="nav-actions-container-lg">
                 <div className="nav-actions-container-lg-child">
@@ -224,7 +223,7 @@ const NavItems = () => {
                         <li className="nav-items-humberger-sm-lg-item">
                             <div className="humberger-sm-lg-button-container">
                                 <button className="humberger-sm-lg-button">
-                                    <SearchIcon fontSize='large' onClick={handelOpen}/>
+                                    <SearchIcon fontSize='large' onClick={handleOpen}/>
                                 </button>
                             </div>
                         </li>
@@ -236,10 +235,11 @@ const NavItems = () => {
             <div className="nav-items-container-xl-lg">
                 <ul className="nav-items-xl-lg">
                     <div className="nav-items-humberger-lg-xl">
-                        <li className="nav-items-humberger-lg-xl-item">
+                        <li className="nav-items-humberger-lg-xl-item" onClick={handleSideBar}>
                             <div className="humberger-lg-xl-button-container">
                                 <button className="humberger-lg-xl-button">
-                                    <MenuIcon fontSize='large'/>
+                                    {!sidebarContext.sideBarIsOpen? <MenuIcon fontSize='large'/> : <CloseIcon fontSize='large'/>}
+
                                 </button>
                             </div>
                         </li>

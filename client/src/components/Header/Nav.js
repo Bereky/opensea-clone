@@ -5,11 +5,12 @@ import NavSearch from './NavSearch';
 import NavSide from './NavSide';
 
 import { SearchProvider } from '../../Context/SearchProvider';
-import { SearchContext } from '../../Context/SearchContext';
+import { SidebarContext } from '../../Context/SidebarContext';
+
 import { useContext } from 'react';
 
 const Nav = () => {
-    const searchContext = useContext(SearchContext)
+    const sidebarContext = useContext(SidebarContext)
 
     return ( 
         <nav className="navbar">
@@ -17,7 +18,7 @@ const Nav = () => {
                 <NavBrand />
                 <NavSearch />
                 <NavItems />
-                { searchContext.searchBarIsOpen && <NavSide /> }
+                { sidebarContext.sideBarIsOpen && <NavSide /> }
             </SearchProvider>
         </nav>
      );
