@@ -1,3 +1,10 @@
+import PersonIcon from '@mui/icons-material/Person';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import GridOnIcon from '@mui/icons-material/GridOn';
+import SettingsIcon from '@mui/icons-material/Settings';
+import LanguageIcon from '@mui/icons-material/Language';
+import Brightness2Icon from '@mui/icons-material/Brightness2';
 
 export const Dropdowns = {
     explore: [
@@ -96,6 +103,37 @@ export const Dropdowns = {
         {
             name: "Newsletter",
             link: ""
+        }
+    ],
+
+    account: [
+        {
+            name: "Profile",
+            icon: <PersonIcon />
+        },
+        {
+            name: "Favorites",
+            icon: <FavoriteBorderIcon />
+        },
+        {
+            name: "Watchlist",
+            icon: <VisibilityIcon />
+        },
+        {
+            name: "My Collections",
+            icon: <GridOnIcon />
+        },
+        {
+            name: "Setting",
+            icon: <SettingsIcon />
+        },
+        {
+            name: "Language",
+            icon: <LanguageIcon />
+        },
+        {
+            name: "Night Mode",
+            icon: <Brightness2Icon />
         }
     ]
 }
