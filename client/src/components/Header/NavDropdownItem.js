@@ -40,9 +40,27 @@ const NavDropDownResources = (props) => {
         </li>
     )
 }
+
+const NavDropdownAccount = (props) => {
+    return (
+        <li className="dropdown-list-item">
+            <a href="#" className="dropdown-list-item-link">
+                <div className="list-item-icon">
+                    <div className="icon-con">
+                        {props.icon}
+                    </div>
+                </div>
+                <div className="list-item-name">
+                    <span className="item-name">{props.name}</span>
+                </div>
+            </a>
+        </li>
+    )
+}
  
 export {
     NavDropdownStats,
     NavDropdownExplore,
-    NavDropDownResources
+    NavDropDownResources,
+    NavDropdownAccount
 };
