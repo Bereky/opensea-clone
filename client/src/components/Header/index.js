@@ -1,11 +1,15 @@
 import './index.css'
 import Nav from './Nav';
 
+import { SidebarProvider } from '../../Context/SidebarProvider';
+
 const Header = () => {
     return ( 
         <div className="header">
             <div className="header-container">
-                <Nav />
+                <SidebarProvider>
+                    <Nav />
+                </SidebarProvider>
             </div>
         </div>
      );
