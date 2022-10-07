@@ -3,7 +3,7 @@
 const NavDropdownExplore = (props) => {
     return ( 
         <li className="dropdown-list-item">
-            <a href="#" className="dropdown-list-item-link">
+            <a href={props.link} className="dropdown-list-item-link">
                 <div className="list-item-icon">
                     <div className="icon-con">
                         <img src={props.imageSource} alt={props.altText} className="icon-image" />
@@ -20,7 +20,7 @@ const NavDropdownExplore = (props) => {
 const NavDropdownStats = (props) => {
     return (
         <li className="dropdown-list-item">
-            <a href="#" className="dropdown-list-item-link">
+            <a href={props.link} className="dropdown-list-item-link">
                 <div className="list-item-name">
                     <span className="item-name">{props.name}</span>
                 </div>
@@ -32,7 +32,7 @@ const NavDropdownStats = (props) => {
 const NavDropDownResources = (props) => {
     return (
         <li className="dropdown-list-item">
-            <a href="#" className="dropdown-list-item-link">
+            <a href={props.link} className="dropdown-list-item-link">
                 <div className="list-item-name">
                     <span className="item-name">{props.name}</span>
                 </div>
@@ -44,7 +44,7 @@ const NavDropDownResources = (props) => {
 const NavDropdownAccount = (props) => {
     return (
         <li className="dropdown-list-item">
-            <a href="#" className="dropdown-list-item-link">
+            <a href={props.link} className="dropdown-list-item-link">
                 <div className="list-item-icon">
                     <div className="icon-con">
                         {props.icon}
