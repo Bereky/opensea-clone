@@ -3,7 +3,7 @@ import AccountBalanceWallet from '@mui/icons-material/AccountBalanceWallet';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import SearchIcon from '@mui/icons-material/Search';
-import { useState, useContext, useReducer } from 'react';
+import { useContext, useReducer } from 'react';
 import { SearchContext } from '../../Context/SearchContext';
 
 import TwitterIcon from '@mui/icons-material/Twitter';
